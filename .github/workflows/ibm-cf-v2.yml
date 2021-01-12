@@ -27,8 +27,8 @@ jobs:
 
     - name: Install Cloud Foundry CLI
       run: |
-        curl -fsSL "https://packages.cloudfoundry.org/stable?release=linux64-binary&version=v6" | tar -zxC /tmp
-        sudo install -m 755 /tmp/cf7 /usr/local/bin/cf
+        curl -L "https://packages.cloudfoundry.org/stable?release=linux64-binary&source=github&version=v6" | tar -zx
+        sudo mv cf /usr/local/bin
         
 
     - name: Login to IBM Cloud Foundry
