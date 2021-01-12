@@ -33,8 +33,8 @@ jobs:
 
     - name: Login to IBM Cloud Foundry
       run: |
-        cf login \
-          -a "${IBM_CF_API}" \
+        cf l  \
+          -a "${IBM_CF_API}"  login \
           -u "${IBM_CF_USERNAME}" \
           -p "${IBM_CF_PASSWORD}" 
 
